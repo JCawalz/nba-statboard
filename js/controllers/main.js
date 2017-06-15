@@ -99,13 +99,11 @@ $scope.flag = "";
 	}
 
 	$scope.fg3percent = function(){
-		$scope.flag = "FG3_PCT";
-		$state.go('stat', {nameResult: $scope.fg3pctName, valueResult: $scope.fg3pctValue, _flag: $scope.flag});
+		$state.go('fg3percent', {nameResult: $scope.fg3pctName, valueResult: $scope.fg3pctValue);
 	}
 
 	$scope.fantasypoints = function(){
-		$scope.flag = "FP";
-		$state.go('stat', {nameResult: $scope.fpName, valueResult: $scope.fpValue, _flag: $scope.flag});
+		$state.go('fppg', {nameResult: $scope.fpName, valueResult: $scope.fpValue);
 	}
 
 }]);

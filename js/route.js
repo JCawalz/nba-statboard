@@ -14,5 +14,15 @@ app.config(function($stateProvider, $urlRouterProvider){
       url:'/stat',
       templateUrl: 'templates/statPage.html',
       params:{nameResult: null, valueResult: null, _flag: null}
-    });
+    })
+    .state('fg3percent',{
+       url:'/fg3percent',
+       templateUrl: 'templates/fg3percentPage.html',
+       params:{nameResult: null, valueResult: null}
+    })
+    .state('fppg',{
+           url:'/ffpg',
+           templateUrl: 'templates/FPPage.html',
+           params:{nameResult: null, valueResult: null}
+        })
 });
