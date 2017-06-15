@@ -118,6 +118,15 @@ $scope.flag = "";
     	$state.go('fppg', {nameResult: $scope.fpName, valueResult: $scope.fpValue});
     }
 
+    $scope.fgpercent = function(){
+		$scope.flag = "FG_PCT";
+		$state.go('fieldGoalPCT', {nameResult: $scope.fgpctName, valueResult: $scope.fgpctValue});
+	}
+
+	$scope.fgthree = function(){
+		$scope.flag = "FG3M";
+		$state.go('fieldGoal3P', {nameResult: $scope.fg3mName, valueResult: $scope.fg3mValue});
+	}
 /* Adjust comment after the feature assigned to you.
 
 	$scope.blocks = function(){
@@ -128,16 +137,6 @@ $scope.flag = "";
 	$scope.steals = function(){
 		$scope.flag = "STL";
 		$state.go('stealsPage', {nameResult: $scope.stlName, valueResult: $scope.stlValue, _flag: $scope.flag});
-	}
-
-	$scope.fgpercent = function(){
-		$scope.flag = "FG_PCT";
-		$state.go('stat', {nameResult: $scope.fgpctName, valueResult: $scope.fgpctValue, _flag: $scope.flag});
-	}
-
-	$scope.fgthree = function(){
-		$scope.flag = "FG3M";
-		$state.go('stat', {nameResult: $scope.fg3mName, valueResult: $scope.fg3mValue, _flag: $scope.flag});
 	}
 
 	$scope.fg3percent = function(){
