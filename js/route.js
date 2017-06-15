@@ -10,11 +10,6 @@ app.config(function($stateProvider, $urlRouterProvider){
       url:'/',
       templateUrl: 'templates/homePage.html'
     })
-    .state('stat',{
-      url:'/stat',
-      templateUrl: 'templates/statPage.html',
-      params:{nameResult: null, valueResult: null, _flag: null}
-    })
     .state('fg3percent',{
        url:'/fg3percent',
        templateUrl: 'templates/fg3percentPage.html',
@@ -24,5 +19,5 @@ app.config(function($stateProvider, $urlRouterProvider){
            url:'/ffpg',
            templateUrl: 'templates/FPPage.html',
            params:{nameResult: null, valueResult: null}
-        })
+     });
 });

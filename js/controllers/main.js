@@ -63,47 +63,47 @@ $scope.flag = "";
 		$log.info('ERROR =======>', error);
 	});
 
-	$scope.points = function(){
-		$scope.flag = "PTS";
-		$state.go('stat', {nameResult: $scope.ptsName, valueResult: $scope.ptsValue, _flag: $scope.flag});
-	}
-
-	$scope.rebounds = function(){
-		$scope.flag = "REB";
-		$state.go('stat', {nameResult: $scope.rebName, valueResult: $scope.rebValue, _flag: $scope.flag});
-	}
-//PTS, REB, AST, BLK, STL, FG_PCT (fgpct),FG3M,FG3_PCT(fg3pct), FANTASY_POINTS FP
-	$scope.assists = function(){
-		$scope.flag = "AST";
-		$state.go('stat', {nameResult: $scope.astName, valueResult: $scope.astValue, _flag: $scope.flag});
-	}
-
-	$scope.blocks = function(){
-		$scope.flag = "BLK";
-		$state.go('stat', {nameResult: $scope.blkName, valueResult: $scope.blkValue, _flag: $scope.flag});
-	}
-
-	$scope.steals = function(){
-		$scope.flag = "STL";
-		$state.go('stat', {nameResult: $scope.stlName, valueResult: $scope.stlValue, _flag: $scope.flag});
-	}
-
-	$scope.fgpercent = function(){
-		$scope.flag = "FG_PCT";
-		$state.go('stat', {nameResult: $scope.fgpctName, valueResult: $scope.fgpctValue, _flag: $scope.flag});
-	}
-
-	$scope.fgthree = function(){
-		$scope.flag = "FG3M";
-		$state.go('stat', {nameResult: $scope.fg3mName, valueResult: $scope.fg3mValue, _flag: $scope.flag});
-	}
+//	$scope.points = function(){
+//		$scope.flag = "PTS";
+//		$state.go('stat', {nameResult: $scope.ptsName, valueResult: $scope.ptsValue, _flag: $scope.flag});
+//	}
+//
+//	$scope.rebounds = function(){
+//		$scope.flag = "REB";
+//		$state.go('stat', {nameResult: $scope.rebName, valueResult: $scope.rebValue, _flag: $scope.flag});
+//	}
+////PTS, REB, AST, BLK, STL, FG_PCT (fgpct),FG3M,FG3_PCT(fg3pct), FANTASY_POINTS FP
+//	$scope.assists = function(){
+//		$scope.flag = "AST";
+//		$state.go('stat', {nameResult: $scope.astName, valueResult: $scope.astValue, _flag: $scope.flag});
+//	}
+//
+//	$scope.blocks = function(){
+//		$scope.flag = "BLK";
+//		$state.go('stat', {nameResult: $scope.blkName, valueResult: $scope.blkValue, _flag: $scope.flag});
+//	}
+//
+//	$scope.steals = function(){
+//		$scope.flag = "STL";
+//		$state.go('stat', {nameResult: $scope.stlName, valueResult: $scope.stlValue, _flag: $scope.flag});
+//	}
+//
+//	$scope.fgpercent = function(){
+//		$scope.flag = "FG_PCT";
+//		$state.go('stat', {nameResult: $scope.fgpctName, valueResult: $scope.fgpctValue, _flag: $scope.flag});
+//	}
+//
+//	$scope.fgthree = function(){
+//		$scope.flag = "FG3M";
+//		$state.go('stat', {nameResult: $scope.fg3mName, valueResult: $scope.fg3mValue, _flag: $scope.flag});
+//	}
 
 	$scope.fg3percent = function(){
-		$state.go('fg3percent', {nameResult: $scope.fg3pctName, valueResult: $scope.fg3pctValue);
+		$state.go('fg3percent', {nameResult: $scope.fg3pctName, valueResult: $scope.fg3pctValue});
 	}
 
 	$scope.fantasypoints = function(){
-		$state.go('fppg', {nameResult: $scope.fpName, valueResult: $scope.fpValue);
+		$state.go('fppg', {nameResult: $scope.fpName, valueResult: $scope.fpValue});
 	}
 
 }]);

@@ -1,0 +1,11 @@
+<div ng-controller = "fantasypointsCtrl">
+    <!--<link rel="stylesheet" type="text/css" href="../css/design.css">-->
+     <div>
+        <h1 style="text-align:center; color:blue; font-size:200%;">Fantasy Points Leaderboard</h1>
+        <table>
+            <tr ng-repeat="a in dataName">
+                <td> {{rank[$index]}} <b>{{a}}</b> : {{dataValue[$index]}} fantasy points per game </td>
+            </tr>
+        </table>
+     </div>
+</div>
