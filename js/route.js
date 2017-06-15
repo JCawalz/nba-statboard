@@ -1,6 +1,5 @@
 app.config(function($stateProvider, $urlRouterProvider){  
 
-  console.log('Loading UI-Router');
 
   //set default path here
   $urlRouterProvider.otherwise('/');
@@ -34,5 +33,16 @@ app.config(function($stateProvider, $urlRouterProvider){
       url:'/top_5_players_in_assists',
       templateUrl: 'templates/astPage.html',
       params:{nameResult_AST: null, valueResult_AST: null, _flag_AST: null}
+    })
+    .state('stealsPage',{
+      url:'/stealsPage',
+      templateUrl: 'templates/stealPage.html',
+      params:{nameResult: null, valueResult: null, _flag: null}
+    })
+    .state('blocksPage',{
+      url:'/blocksPage',
+      templateUrl: 'templates/blocksPage.html',
+      params:{nameResult: null, valueResult: null, _flag: null}
     });
+
 });
