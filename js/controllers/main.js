@@ -65,18 +65,20 @@ $scope.flag = "";
 
 	$scope.points = function(){
 		$scope.flag = "PTS";
-		$state.go('stat', {nameResult: $scope.ptsName, valueResult: $scope.ptsValue, _flag: $scope.flag});
+		$state.go('points', {nameResult_PTS: $scope.ptsName, valueResult_PTS: $scope.ptsValue, _flag_PTS: $scope.flag});
 	}
 
 	$scope.rebounds = function(){
 		$scope.flag = "REB";
-		$state.go('stat', {nameResult: $scope.rebName, valueResult: $scope.rebValue, _flag: $scope.flag});
+		$state.go('rebounds', {nameResult_REB: $scope.rebName, valueResult_REB: $scope.rebValue, _flag_REB: $scope.flag});
 	}
-//PTS, REB, AST, BLK, STL, FG_PCT (fgpct),FG3M,FG3_PCT(fg3pct), FANTASY_POINTS FP
+
 	$scope.assists = function(){
 		$scope.flag = "AST";
-		$state.go('stat', {nameResult: $scope.astName, valueResult: $scope.astValue, _flag: $scope.flag});
+		$state.go('assists', {nameResult_AST: $scope.astName, valueResult_AST: $scope.astValue, _flag_AST: $scope.flag});
 	}
+
+/* Adjust comment after the feature assigned to you.
 
 	$scope.blocks = function(){
 		$scope.flag = "BLK";
@@ -107,5 +109,5 @@ $scope.flag = "";
 		$scope.flag = "FP";
 		$state.go('stat', {nameResult: $scope.fpName, valueResult: $scope.fpValue, _flag: $scope.flag});
 	}
-
+*/
 }]);
