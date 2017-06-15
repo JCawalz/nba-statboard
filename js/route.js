@@ -10,9 +10,14 @@ app.config(function($stateProvider, $urlRouterProvider){
       url:'/',
       templateUrl: 'templates/homePage.html'
     })
-    .state('stat',{
-      url:'/stat',
-      templateUrl: 'templates/statPage.html',
-      params:{nameResult: null, valueResult: null, _flag: null}
+    .state('fieldGoalPCT',{
+          url:'/fieldGoalPCT',
+          templateUrl: 'templates/fieldGoalPCT.html',
+          params:{nameResult: null, valueResult: null}
+    })
+    .state('fieldGoal3P',{
+          url:'/fieldGoal3P',
+          templateUrl: 'templates/fieldGoal3P.html',
+          params:{nameResult: null, valueResult: null}
     });
 });

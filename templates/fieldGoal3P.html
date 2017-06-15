@@ -1,0 +1,18 @@
+<div class="stat" ng-controller="fieldGoal3Pctrl">
+<!--<link rel="stylesheet" type="text/css" href="../css/design.css">-->
+
+
+	<div>
+		<h1 style="text-align:center; color:blue; font-size:200%;">Three Point Field Goal Leaderboard</h1>
+		<table>
+			<tr ng-repeat="a in dataName">
+				<td> {{rank[$index]}} <b>{{a}}</b> : {{dataValue[$index]}} points per game </td>
+			</tr>
+		</table>
+	</div>
+
+<br><br>
+
+<button class="stat" ng-click="returnHome()">HOME</button>
+<br>
+</div>

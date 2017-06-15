@@ -90,12 +90,12 @@ $scope.flag = "";
 
 	$scope.fgpercent = function(){
 		$scope.flag = "FG_PCT";
-		$state.go('stat', {nameResult: $scope.fgpctName, valueResult: $scope.fgpctValue, _flag: $scope.flag});
+		$state.go('fieldGoalPCT', {nameResult: $scope.fgpctName, valueResult: $scope.fgpctValue});
 	}
 
 	$scope.fgthree = function(){
 		$scope.flag = "FG3M";
-		$state.go('stat', {nameResult: $scope.fg3mName, valueResult: $scope.fg3mValue, _flag: $scope.flag});
+		$state.go('fieldGoal3P', {nameResult: $scope.fg3mName, valueResult: $scope.fg3mValue});
 	}
 
 	$scope.fg3percent = function(){
