@@ -78,6 +78,15 @@ $scope.flag = "";
 		$state.go('assists', {nameResult_AST: $scope.astName, valueResult_AST: $scope.astValue, _flag_AST: $scope.flag});
 	}
 
+    $scope.fgpercent = function(){
+		$scope.flag = "FG_PCT";
+		$state.go('fieldGoalPCT', {nameResult: $scope.fgpctName, valueResult: $scope.fgpctValue});
+	}
+
+	$scope.fgthree = function(){
+		$scope.flag = "FG3M";
+		$state.go('fieldGoal3P', {nameResult: $scope.fg3mName, valueResult: $scope.fg3mValue});
+	}
 /* Adjust comment after the feature assigned to you.
 
 	$scope.blocks = function(){
@@ -88,16 +97,6 @@ $scope.flag = "";
 	$scope.steals = function(){
 		$scope.flag = "STL";
 		$state.go('stat', {nameResult: $scope.stlName, valueResult: $scope.stlValue, _flag: $scope.flag});
-	}
-
-	$scope.fgpercent = function(){
-		$scope.flag = "FG_PCT";
-		$state.go('fieldGoalPCT', {nameResult: $scope.fgpctName, valueResult: $scope.fgpctValue});
-	}
-
-	$scope.fgthree = function(){
-		$scope.flag = "FG3M";
-		$state.go('fieldGoal3P', {nameResult: $scope.fg3mName, valueResult: $scope.fg3mValue});
 	}
 
 	$scope.fg3percent = function(){
