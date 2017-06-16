@@ -80,12 +80,12 @@ $scope.flag = "";
 
 	$scope.blocks = function(){
 		$scope.flag = "BLK";
-		$state.go('stat', {nameResult: $scope.blkName, valueResult: $scope.blkValue, _flag: $scope.flag});
+		$state.go('blocksPage', {nameResult: $scope.blkName, valueResult: $scope.blkValue, _flag: $scope.flag});
 	}
 
 	$scope.steals = function(){
 		$scope.flag = "STL";
-		$state.go('stat', {nameResult: $scope.stlName, valueResult: $scope.stlValue, _flag: $scope.flag});
+		$state.go('stealsPage', {nameResult: $scope.stlName, valueResult: $scope.stlValue, _flag: $scope.flag});
 	}
 
 	$scope.fgpercent = function(){

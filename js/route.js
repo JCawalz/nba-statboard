@@ -1,6 +1,5 @@
 app.config(function($stateProvider, $urlRouterProvider){  
 
-  console.log('Loading UI-Router');
 
   //set default path here
   $urlRouterProvider.otherwise('/');
@@ -10,9 +9,16 @@ app.config(function($stateProvider, $urlRouterProvider){
       url:'/',
       templateUrl: 'templates/homePage.html'
     })
-    .state('stat',{
-      url:'/stat',
-      templateUrl: 'templates/statPage.html',
+
+    .state('stealsPage',{
+      url:'/stealsPage',
+      templateUrl: 'templates/stealPage.html',
       params:{nameResult: null, valueResult: null, _flag: null}
-    });
+    })
+    .state('blocksPage',{
+          url:'/blocksPage',
+          templateUrl: 'templates/blocksPage.html',
+          params:{nameResult: null, valueResult: null, _flag: null}
+        });
+
 });
