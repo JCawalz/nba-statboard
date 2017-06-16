@@ -47,7 +47,7 @@ app.config(function($stateProvider, $urlRouterProvider){
     })
     .state('stealsPage',{
       url:'/stealsPage',
-      templateUrl: 'templates/stealPage.html',
+      templateUrl: 'templates/stealsPage.html',
       params:{nameResult: null, valueResult: null, _flag: null}
     })
     .state('blocksPage',{
