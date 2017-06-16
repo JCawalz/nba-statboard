@@ -1,0 +1,16 @@
+<!--REBOUNDS HTML -->
+
+<div ng-controller="rebCtrl">
+  <div>
+    <h1 style="text-align:center; color:blue; font-size:200%;">Rebounds Leaderboard</h1>
+    <table>
+      <tr ng-repeat="a in dataName">
+        <td> {{rank[$index]}} <b>{{a}}</b> : {{dataValue[$index]}} points per game </td>
+      </tr>
+    </table>
+  </div>
+
+  <div>
+    <p ng-click="back()"><u  style="color:blue">Back to Main Menu</u></p>
+  </div>
+</div>

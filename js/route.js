@@ -1,6 +1,5 @@
 app.config(function($stateProvider, $urlRouterProvider){  
 
-  console.log('Loading UI-Router');
 
   //set default path here
   $urlRouterProvider.otherwise('/');
@@ -10,9 +9,51 @@ app.config(function($stateProvider, $urlRouterProvider){
       url:'/',
       templateUrl: 'templates/homePage.html'
     })
-    .state('stat',{
-      url:'/stat',
-      templateUrl: 'templates/statPage.html',
+    .state('fieldGoalPCT',{
+          url:'/fieldGoalPCT',
+          templateUrl: 'templates/fieldGoalPCT.html',
+          params:{nameResult: null, valueResult: null}
+    })
+    .state('fieldGoal3P',{
+          url:'/fieldGoal3P',
+          templateUrl: 'templates/fieldGoal3P.html',
+          params:{nameResult: null, valueResult: null}
+    })
+
+    .state('fg3percent',{
+       url:'/fg3percent',
+       templateUrl: 'templates/fg3percentPage.html',
+       params:{nameResult: null, valueResult: null}
+    })
+    .state('fppg',{
+           url:'/ffpg',
+           templateUrl: 'templates/FPPage.html',
+           params:{nameResult: null, valueResult: null}
+     })
+    .state('points',{
+      url:'/top_5_players_in_points',
+      templateUrl: 'templates/ptsPage.html',
+      params:{nameResult_PTS: null, valueResult_PTS: null, _flag_PTS: null}
+    })
+    .state('rebounds',{
+      url:'/top_5_players_in_rebounds',
+      templateUrl: 'templates/rebPage.html',
+      params:{nameResult_REB: null, valueResult_REB: null, _flag_REB: null}
+    })
+    .state('assists',{
+      url:'/top_5_players_in_assists',
+      templateUrl: 'templates/astPage.html',
+      params:{nameResult_AST: null, valueResult_AST: null, _flag_AST: null}
+    })
+    .state('stealsPage',{
+      url:'/stealsPage',
+      templateUrl: 'templates/stealPage.html',
+      params:{nameResult: null, valueResult: null, _flag: null}
+    })
+    .state('blocksPage',{
+      url:'/blocksPage',
+      templateUrl: 'templates/blocksPage.html',
       params:{nameResult: null, valueResult: null, _flag: null}
     });
+
 });
