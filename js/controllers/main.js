@@ -21,6 +21,7 @@ $scope.flag = "";
 	for (var i in jsonData.items[0].items){
 		var basketballObj = jsonData.items[0].items[i];
 			for (i = 0; i < 5; i++){
+
 				if (basketballObj.name == 'PTS'){
 					$scope.ptsName[i] = basketballObj.playerstats[i].PLAYER_NAME;
 					$scope.ptsValue[i] = basketballObj.playerstats[i].PTS;
@@ -33,7 +34,8 @@ $scope.flag = "";
 						$scope.astName[i] = basketballObj.playerstats[i].PLAYER_NAME;
 						$scope.astValue[i] = basketballObj.playerstats[i].AST;
 				}
-				if (basketballObj.name == 'BLK'){
+
+				else if (basketballObj.name == 'BLK'){
 						$scope.blkName[i] = basketballObj.playerstats[i].PLAYER_NAME;
 						$scope.blkValue[i] = basketballObj.playerstats[i].BLK;
 				}
@@ -109,24 +111,25 @@ $scope.flag = "";
 	$scope.assists = function(){
 		$scope.flag = "AST";
 		$state.go('assists', {nameResult_AST: $scope.astName, valueResult_AST: $scope.astValue, _flag_AST: $scope.flag});
+
 	}
     $scope.blocks = function(){
 		$scope.flag = "BLK";
 		$state.go('blocksPage', {nameResult: $scope.blkName, valueResult: $scope.blkValue, _flag: $scope.flag});
-	}
 
-	$scope.steals = function(){
-		$scope.flag = "STL";
-		$state.go('stealsPage', {nameResult: $scope.stlName, valueResult: $scope.stlValue, _flag: $scope.flag});
 	}
 	$scope.fg3percent = function(){
    		$state.go('fg3percent', {nameResult: $scope.fg3pctName, valueResult: $scope.fg3pctValue});
    	}
 
+	$scope.steals = function(){
+		$scope.flag = "STL";
+		$state.go('stealsPage', {nameResult: $scope.stlName, valueResult: $scope.stlValue, _flag: $scope.flag});
+	}
+
    	$scope.fantasypoints = function(){
     	$state.go('fppg', {nameResult: $scope.fpName, valueResult: $scope.fpValue});
     }
-
     $scope.fgpercent = function(){
 		$scope.flag = "FG_PCT";
 		$state.go('fieldGoalPCT', {nameResult: $scope.fgpctName, valueResult: $scope.fgpctValue});
@@ -136,16 +139,4 @@ $scope.flag = "";
 		$scope.flag = "FG3M";
 		$state.go('fieldGoal3P', {nameResult: $scope.fg3mName, valueResult: $scope.fg3mValue});
 	}
-/* Adjust comment after the feature assigned to you.
-
-
-
-	$scope.fg3percent = function(){
-		$state.go('fg3percent', {nameResult: $scope.fg3pctName, valueResult: $scope.fg3pctValue});
-	}
-
-	$scope.fantasypoints = function(){
-		$state.go('fppg', {nameResult: $scope.fpName, valueResult: $scope.fpValue});
-	}
-*/
 }]);
