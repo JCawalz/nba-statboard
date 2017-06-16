@@ -2,15 +2,12 @@
 
 <div ng-if="init == 'BLK'">
     <h1 style="text-align:center; color:blue; font-size:200%;">Blocks Leaderboard</h1>
-    <table
+    <table>
         <tr ng-repeat="a in dataName">
             <td> {{rank[$index]}} <b>{{a}}</b> : {{dataValue[$index]}} blocks per game </td>
         </tr>
     </table>
 </div>
-
-
-
 
 
 </div>
