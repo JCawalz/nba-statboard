@@ -23,7 +23,7 @@ app.config(function($stateProvider, $urlRouterProvider){
     .state('fg3percent',{
        url:'/fg3percent',
        templateUrl: 'templates/fg3percentPage.html',
-       params:{nameResult: null, valueResult: null}
+       params:{nameResult: null, valueResult: null, modalResult: null}
     })
     .state('fppg',{
            url:'/ffpg',
