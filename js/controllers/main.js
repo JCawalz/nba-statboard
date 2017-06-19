@@ -79,12 +79,7 @@ $scope.flag = "";
 		$state.go('assists', {nameResult_AST: $scope.astName, valueResult_AST: $scope.astValue});
 
 	}
-    $scope.blocks = function(){
-		$scope.flag = "BLK";
-		$state.go('blocksPage', {nameResult: $scope.blkName, valueResult: $scope.blkValue, _flag: $scope.flag});
-
-	}
-	$scope.blocks = function(){
+  	$scope.blocks = function(){
 		$scope.flag = "BLK";
 		$state.go('blocksPage', {nameResult: $scope.blkName, valueResult: $scope.blkValue, _flag: $scope.flag});
 	}
