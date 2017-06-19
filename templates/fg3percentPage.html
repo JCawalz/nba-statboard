@@ -4,9 +4,28 @@
         <h1 style="text-align:center; color:blue; font-size:200%;">Field Goal Three Point Percentage</h1>
             <table>
                 <tr ng-repeat="a in dataName">
-                    <td> {{rank[$index]}} <b>{{a}}</b> : {{dataValue[$index]}} total three point percentage</td>
+                    <td> {{rank[$index]}} <b><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" ng-click="pass(a)">{{a}}</button></b> : {{dataValue[$index]}} total three point percentage</td>
                 </tr>
             </table>
     </div>
-
+    <div>
+        <p ng-click="back()"><u  style="color:blue">Back to Main Menu</u></p>
+    </div>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Field Goal Three Point Percentage</h4>
+                </div>
+                <div class="modal-body">
+                    <p>{{X}}. {{Y}} {{Z}} total three point percentage</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -3,6 +3,7 @@ var app = angular.module('nbaApp', ['ui.router']);
 app.controller('mainCtrl',['httpService','$scope', '$log', '$state',
 	function(httpService, $scope, $log, $state){
 
+$scope.fg3pctModal = {},
 $scope.ptsName = {}, $scope.ptsValue = {},
 $scope.rebName = {}, $scope.rebValue = {},
 $scope.astName = {}, $scope.astValue = {},
@@ -54,6 +55,7 @@ $scope.flag = "";
 				else if (basketballObj.name == 'FG3_PCT'){
 						$scope.fg3pctName[i] = basketballObj.playerstats[i].PLAYER_NAME;
 						$scope.fg3pctValue[i] = basketballObj.playerstats[i].FG3_PCT;
+						$scope.fg3pctModal[i] = basketballObj.playerstats[i];
 				}
 				else if (basketballObj.name == 'FANTASY_POINTS'){
 						$scope.fpName[i] = basketballObj.playerstats[i].PLAYER_NAME;
@@ -91,7 +93,7 @@ $scope.flag = "";
 		$state.go('stealsPage', {nameResult: $scope.stlName, valueResult: $scope.stlValue, _flag: $scope.flag});
 	}
 	$scope.fg3percent = function(){
-   		$state.go('fg3percent', {nameResult: $scope.fg3pctName, valueResult: $scope.fg3pctValue});
+   		$state.go('fg3percent', {nameResult: $scope.fg3pctName, valueResult: $scope.fg3pctValue, modalResult: $scope.fg3pctModal});
    	}
    	$scope.fantasypoints = function(){
     	$state.go('fppg', {nameResult: $scope.fpName, valueResult: $scope.fpValue});
