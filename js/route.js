@@ -9,16 +9,6 @@ app.config(function($stateProvider, $urlRouterProvider){
       url:'/',
       templateUrl: 'templates/homePage.html'
     })
-    .state('fieldGoalPCT',{
-          url:'/fieldGoalPCT',
-          templateUrl: 'templates/fieldGoalPCT.html',
-          params:{nameResult: null, valueResult: null}
-    })
-    .state('fieldGoal3P',{
-          url:'/fieldGoal3P',
-          templateUrl: 'templates/fieldGoal3P.html',
-          params:{nameResult: null, valueResult: null}
-    })
 
     .state('fg3percent',{
        url:'/fg3percent',
@@ -55,5 +45,4 @@ app.config(function($stateProvider, $urlRouterProvider){
       templateUrl: 'templates/blocksPage.html',
       params:{nameResult: null, valueResult: null, _flag: null}
     });
-
 });

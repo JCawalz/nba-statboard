@@ -21,7 +21,6 @@ $scope.flag = "";
 	for (var i in jsonData.items[0].items){
 		var basketballObj = jsonData.items[0].items[i];
 			for (i = 0; i < 5; i++){
-
 				if (basketballObj.name == 'PTS'){
 					$scope.ptsName[i] = basketballObj.playerstats[i].PLAYER_NAME;
 					$scope.ptsValue[i] = basketballObj.playerstats[i].PTS;
@@ -34,7 +33,6 @@ $scope.flag = "";
 						$scope.astName[i] = basketballObj.playerstats[i].PLAYER_NAME;
 						$scope.astValue[i] = basketballObj.playerstats[i].AST;
 				}
-
 				else if (basketballObj.name == 'BLK'){
 						$scope.blkName[i] = basketballObj.playerstats[i].PLAYER_NAME;
 						$scope.blkValue[i] = basketballObj.playerstats[i].BLK;
