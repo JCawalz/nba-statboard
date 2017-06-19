@@ -2,11 +2,28 @@
 
 <div ng-controller="astCtrl">
 
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p ng-repeat="(key,data) in dataJSON">{{key}} : <b>{{data}}</b></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <div>
         <h1 style="text-align:center; color:blue; font-size:200%;">Assists Leaderboard</h1>
         <table>
             <tr ng-repeat="a in dataName">
-                <td> {{rank[$index]}} <b>{{a}}</b> : {{dataValue[$index]}} points per game </td>
+                <td> {{rank[$index]}} <button ng-click="openModal(a)" data-toggle="modal" data-target="#myModal"><b>{{a}}</b></button> : {{dataValue[$index]}} assists per game </td>
             </tr>
         </table>
     </div>

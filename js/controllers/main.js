@@ -68,18 +68,15 @@ $scope.flag = "";
 	});
 
 	$scope.points = function(){
-		$scope.flag = "PTS";
-		$state.go('points', {nameResult_PTS: $scope.ptsName, valueResult_PTS: $scope.ptsValue, _flag_PTS: $scope.flag});
+		$state.go('points', {nameResult_PTS: $scope.ptsName, valueResult_PTS: $scope.ptsValue});
 	}
 
 	$scope.rebounds = function(){
-		$scope.flag = "REB";
-		$state.go('rebounds', {nameResult_REB: $scope.rebName, valueResult_REB: $scope.rebValue, _flag_REB: $scope.flag});
+		$state.go('rebounds', {nameResult_REB: $scope.rebName, valueResult_REB: $scope.rebValue});
 	}
 
 	$scope.assists = function(){
-		$scope.flag = "AST";
-		$state.go('assists', {nameResult_AST: $scope.astName, valueResult_AST: $scope.astValue, _flag_AST: $scope.flag});
+		$state.go('assists', {nameResult_AST: $scope.astName, valueResult_AST: $scope.astValue});
 
 	}
     $scope.blocks = function(){
