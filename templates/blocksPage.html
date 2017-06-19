@@ -2,15 +2,46 @@
 
 <div ng-if="init == 'BLK'">
     <h1 style="text-align:center; color:blue; font-size:200%;">Blocks Leaderboard</h1>
-    <table
+    <table align="center">
         <tr ng-repeat="a in dataName">
-            <td> {{rank[$index]}} <b>{{a}}</b> : {{dataValue[$index]}} blocks per game </td>
+            <td>
+                <div ng-click="displaySteals(a)" data-toggle="modal" data-target="#myModal">{{a}}</div>
+            </td>
         </tr>
     </table>
+    <div>
+
+
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+
+                    <div class="modal-body" align="center">
+                        <div ng-repeat="b in JSON">{{b}}</div>
+                    </div>
+                    <div align="center">
+                        <button type="button" data-dismiss="modal">Close</button>
+
+                    </div>
+                    <br>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <br><br>
+    <div align="center">
+    <button ng-click="back()">Back to Main Menu</button>
+    </div>
 </div>
-
-
-
-
+</div>
 
 </div>
